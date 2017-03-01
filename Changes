@@ -1,0 +1,6 @@
+Revision history for Perl extension OpenGL::Array.
+
+0.01  Tue Feb 28 16:23:40 2017
+	- original version; created by h2xs 1.23 with options
+		-O -b 5.8.0 -A -n OpenGL::Array
+

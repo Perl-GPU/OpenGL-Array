@@ -1,24 +1,16 @@
 #!/usr/bin/perl -w
 use strict;
 
+use OpenGL qw(:all);
+
 # Sample/Test app for OpenGL::Array functions
 # by Bob "grafman" Free <grafman@graphcomp.com>
 # http://graphcomp.com/opengl
 
-use OpenGL qw/ :all /;
-
-#use OpenGL::Image;
-#use OpenGL::Shader;
 use Time::HiRes qw( gettimeofday );
 
 
 use constant PROGRAM_TITLE => "OpenGL::ARRAY Test App";
-
-# Window vars
-my $Window_ID;
-
-# Vertex Buffer Object data
-my($VertexObjID);
 
 my @verts =
 (
@@ -94,27 +86,6 @@ my @xform =
 );
 my $xform = OpenGL::Array->new_list(GL_FLOAT,@xform);
 
-
-
-# ------
-# The main() function.  Inits OpenGL.  Calls our own init function,
-# then passes control onto OpenGL.
-
-glutInit();
-
-# To see OpenGL drawing, take out the GLUT_DOUBLE request.
-glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH | GLUT_ALPHA);
-glutInitWindowSize(1,1);
-
-# Open a window
-$Window_ID = glutCreateWindow( PROGRAM_TITLE );
-glutHideWindow();
-
-# Test for GPGPU support
-print "Has GPGPU Support: ".OpenGL::glpHasGPGPU()."\n";
-
-
-
 # Tests
 my $loops = 2;
 my $vertices = 4;
@@ -125,7 +96,6 @@ print "Initial data:\n";
 print "Loops: $loops, Vertices: $vertices\n";
 my $verts = init_verts($vertices);
 print_verts($verts,$vertices) if ($print_verts);
-
 
 $start = gettimeofday();
 for ($i=0;$i<$loops;$i++)
@@ -148,12 +118,6 @@ $secs = (gettimeofday()-$start)/$loops;
 my $vps_gpu = int($vertices/$secs);
 print "Affine VPS:  $vps_gpu\n";
 print_verts($verts,$vertices) if ($print_verts);
-
-
-# Destroy window
-glutDestroyWindow($Window_ID);
-exit 0;
-
 
 
 sub init_verts

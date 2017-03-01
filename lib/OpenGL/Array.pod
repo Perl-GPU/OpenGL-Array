@@ -4,7 +4,8 @@ OpenGL::Array - Perl Array handling and conversion between Perl arrays and C arr
 
 =head1 SYNOPSIS
 
-    use OpenGL qw(GL_FLOAT);
+    use OpenGL::Modern qw(GL_FLOAT);
+    use OpenGL::Array;
 
     my $array = OpenGL::Array->new(4, GL_FLOAT);
     my $c_ptr = $array->ptr(); # can be passed to OpenGL _c based functions

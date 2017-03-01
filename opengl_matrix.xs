@@ -1,4 +1,4 @@
-/*  Last saved: Sun 06 Sep 2009 02:10:28 PM */
+/*  Last saved: Wed 01 Mar 2017 12:43:24 PM */
 
 /*  Copyright (c) 2015 Bob Free. All rights reserved.
  *  This program is free software; you can redistribute it and/or
@@ -13,9 +13,7 @@
 
 #include "pgopogl.h"
 
-#ifdef HAVE_GL
 #include "gl_util.h"
-#endif
 
 #define PI (3.14159265359)
 
@@ -929,18 +927,3 @@ invert(mat, transpose)
 
 
 #endif /* End IN_POGL_MATRIX_XS */
-
-
-
-
-
-
-
-##################### GLU #########################
-
-
-############################## GLUT #########################
-
-
-# /* This is assigned to GLX for now.  The glp*() functions should be split out */
-
