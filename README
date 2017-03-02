@@ -1,5 +1,5 @@
-OpenGL-Array version 0.01
-=========================
+OpenGL-Array version 0.70_01
+============================
 
 This is a stand-alone distribution of OpenGL::Array
 (which includes OpenGL::Matrix).  All of these were
@@ -27,7 +27,9 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  TODO
+  Devel::CheckOS      => 0
+  ExtUtils::MakeMaker => 6.52
+  Test::More          =>  0
 
 COPYRIGHT AND LICENCE
 

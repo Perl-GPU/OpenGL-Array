@@ -1,6 +1,6 @@
 Revision history for Perl extension OpenGL::Array.
 
-0.01  Tue Feb 28 16:23:40 2017
-	- original version; created by h2xs 1.23 with options
-		-O -b 5.8.0 -A -n OpenGL::Array
-
+0.70_01  Thu Mar  2 10:13:19 EST 2017
+        - first stand alone version of OpenGL::Array
+	- framework initialize with h2xs
+	- code from Perl OpenGL 0.70
