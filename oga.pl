@@ -1,7 +1,8 @@
 #!/usr/bin/perl -w
 use strict;
 
-use OpenGL qw(:all);
+use OpenGL::Modern qw(GL_FLOAT);
+use OpenGL::Array;
 
 # Sample/Test app for OpenGL::Array functions
 # by Bob "grafman" Free <grafman@graphcomp.com>

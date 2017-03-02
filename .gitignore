@@ -1,0 +1,13 @@
+MYMETA.*
+MANIFEST.bak
+Makefile
+Makefile.old
+OpenGL-Array-*.tar.gz
+OpenGL-Array-*/
+*.bs
+*.o
+blib/
+pm_to_blib
+*~
+opengl_array.c
+opengl_matrix.c
