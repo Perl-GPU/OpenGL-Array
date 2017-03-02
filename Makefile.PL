@@ -26,8 +26,8 @@ else {
 my $build_config =
 {
     'NAME'              => 'OpenGL::Array',
-    'VERSION_FROM'      => 'lib/OpenGL/Array.pm', # finds $VERSION, requires EU::MM from perl >= 5.5
-    'ABSTRACT_FROM'     => 'lib/OpenGL/Array.pm', # retrieve abstract from module
+    'VERSION_FROM'      => 'lib/OpenGL/Array.pm',  # finds $VERSION, requires EU::MM from perl >= 5.5
+    'ABSTRACT_FROM'     => 'lib/OpenGL/Array.pod', # retrieve abstract from module
     'PREREQ_PM'         => {
         'Test::More' => 0
     },
