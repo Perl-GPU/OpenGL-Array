@@ -2,12 +2,25 @@ use 5.008000;
 use strict;
 use warnings;
 use ExtUtils::MakeMaker;
+use Devel::CheckOS qw(os_is);
 
 my ( $DEFS, $INCS, $LIBS, $DYNS, $LDFROM, $EXES, $OPTS ); 
 
 $EXES = [];
 $DYNS = {};
-$LIBS = [ '-lGL', ];
+
+if ( os_is( 'MSWin32' ) ) {
+    $LIBS   = '-lopengl32 -lgdi32 -lmsimg32';
+}
+elsif ( os_is( 'Cygwin' ) ) {
+    $LIBS = '-lGL -lX11';
+}
+elsif ( os_is( 'MacOSX' ) ) {
+    $DYNS = { 'OTHERLDFLAGS' => '-framework OpenGL' };
+}
+else {
+    $LIBS = '-lGL -lX11';
+}
 
 # This is the final build configuration
 my $build_config =
@@ -15,7 +28,13 @@ my $build_config =
     'NAME'              => 'OpenGL::Array',
     'VERSION_FROM'      => 'lib/OpenGL/Array.pm', # finds $VERSION, requires EU::MM from perl >= 5.5
     'ABSTRACT_FROM'     => 'lib/OpenGL/Array.pm', # retrieve abstract from module
-    'PREREQ_PM'         => { 'Test::More' => 0 }, # e.g., Module::Name => 1.1
+    'PREREQ_PM'         => {
+        'Test::More' => 0
+    },
+    'CONFIGURE_REQUIRES' => {
+        'Devel::CheckOS' => 0,
+        'ExtUtils::MakeMaker' => 6.52,  # for CONFIGURE_REQUIRES
+    },
     'LICENSE'           => 'perl',
     #'PM'                => { },
     'AUTHOR'            => "Chris Marshall ".'<chm at cpan dot org>',

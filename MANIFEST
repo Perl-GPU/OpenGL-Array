@@ -10,7 +10,6 @@ oga.pl
 opengl_array.xs
 opengl_matrix.xs
 pgopogl.h
-pgopogl.inc
 pgopogl.xs
 ppport.h
 t/OpenGL-Array.t
