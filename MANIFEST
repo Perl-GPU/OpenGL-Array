@@ -10,7 +10,7 @@ oga.pl
 opengl_array.xs
 opengl_matrix.xs
 pgopogl.h
-pgopogl.xs
+pgopogl_call_XS.h
 ppport.h
 t/OpenGL-Array.t
 typemap
