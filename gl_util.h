@@ -13,11 +13,15 @@
 #endif
 
 /* Provide GL header files for Windows and Apple */
-#define INCLUDE_LOCAL_HEADER defined(HAVE_W32API) || defined(__APPLE__)
+#define INCLUDE_LOCAL_HEADER defined(HAVE_W32API)
 #if INCLUDE_LOCAL_HEADER
 #include "./include/GL/gl.h"
 #else
+#if defined(__APPLE__)
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 #endif
 
 /* Use version-detection if available */
