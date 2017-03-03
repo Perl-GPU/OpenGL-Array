@@ -1,7 +1,7 @@
 Revision history for Perl extension OpenGL::Array.
 
 0.70_02  TBD
-
+        - Fix Apple includes for GL (uses <OpenGL/gl.h>)
 
 0.70_01  Thu Mar  2 10:13:19 EST 2017
         - first stand alone version of OpenGL::Array
