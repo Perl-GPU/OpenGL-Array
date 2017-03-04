@@ -48,8 +48,8 @@ my $build_config =
     'META_MERGE'        => {
         resources       => {
             homepage    => 'http://sourceforge.net/projects/pogl/',
-            bugtracker  => 'http://sourceforge.net/tracker/?group_id=562483&atid=2281758',
-            repository  => 'git://pogl.git.sourceforge.net/gitroot/pogl/pogl',
+            bugtracker  => 'https://github.com/devel-chm/OpenGL-Array/issues',
+            repository  => 'https://github.com/devel-chm/OpenGL-Array.git',
         },
     },
     'EXE_FILES'         => $EXES,
