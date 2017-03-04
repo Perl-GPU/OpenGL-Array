@@ -1,6 +1,7 @@
 Revision history for Perl extension OpenGL::Array.
 
-0.70_03  TBD
+0.71     2017-03-04 07:18:35-05:00
+        - First official CPAN release
 
 
 0.70_02  2017-03-03 09:40:46-05:00

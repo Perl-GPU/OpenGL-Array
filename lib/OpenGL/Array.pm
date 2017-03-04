@@ -26,7 +26,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.70_03';
+our $VERSION = '0.71';
 
 
 bootstrap OpenGL::Array;
