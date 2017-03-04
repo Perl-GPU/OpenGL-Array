@@ -1,4 +1,4 @@
-OpenGL-Array version 0.71
+OpenGL-Array version 0.71_01
 ============================
 
 This is a stand-alone distribution of OpenGL::Array
@@ -30,6 +30,9 @@ This module requires these other modules and libraries:
   Devel::CheckOS      => 0
   ExtUtils::MakeMaker => 6.52
   Test::More          =>  0
+
+Do not install this module with OpenGL.  It is only for
+use separate from that module with OpenGL::Modern.
 
 COPYRIGHT AND LICENCE
 
